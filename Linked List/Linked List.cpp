@@ -90,4 +90,20 @@ bool listEmpty() {
 
 }
 
-void traverse() 
+void traverse() {
+	if (listEmpty()) {
+		cout << "List Kosong" << endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+	else {
+		Node* currentNode = START;
+		while (currentNode != NULL) {
+			cout << "Nim: " << currentNode->noMhs << ", Nama: " << currentNode->name << endl;
+			currentNode = currentNode->next;
+		}
+	}
+}
+
+void searchData() 
