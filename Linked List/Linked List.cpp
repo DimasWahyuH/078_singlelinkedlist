@@ -82,4 +82,12 @@ bool deleteNode(int nim) {
 		START = current->next;
 	return true;
 }
-bool listEmpty
+bool listEmpty() {
+	if (START == NULL)
+		return true;
+	else
+		return false;
+
+}
+
+void traverse() 
