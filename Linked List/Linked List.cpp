@@ -72,4 +72,14 @@ bool serachNode(int nim, Mode* current, Node* previous) {
 		return false;
 	}
 }
-bool deleteNode(int nim)
+bool deleteNode(int nim) {
+	Node* current = START;
+	Node* previous = START;
+	if (serachNode(nim, previous, current) == false)
+		return false;
+	previous->next = current->next;
+	if (current == START)
+		START = current->next;
+	return true;
+}
+bool listEmpty
